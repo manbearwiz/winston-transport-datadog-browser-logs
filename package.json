@@ -7,6 +7,16 @@
   "files": [
     "/dist"
   ],
+  "keywords": [
+    "browser",
+    "datadog",
+    "error",
+    "logger",
+    "logging",
+    "logs",
+    "typescript",
+    "winston"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",

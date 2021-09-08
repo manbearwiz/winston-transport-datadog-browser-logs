@@ -1,6 +1,8 @@
 # winston-datadog-browser
 
-Send winston logs to Datadog via the browser logs SDK.
+Send winston logs from the browser to Datadog via the [datadog browser logs SDK](https://github.com/DataDog/browser-sdk/tree/main/packages/logs#browser-log-collection).
+
+`winston-transport` + `@datadog/browser-logs`
 
 ## Installation
 
@@ -22,10 +24,14 @@ configure({
       forwardErrorsToLogs: true,
       sampleRate: 100,
     }),
-    // Optionally log to browser as well
+    // Optionally, also log to browser console
     new BrowserConsole({
       format: format.simple(),
     }),
   ],
 });
 ```
+
+## Configuration
+
+`DatadogBrowserLogs` uses the same configuration interface as `@datadog/browser-logs`. See the [datadog initialization parameters](https://github.com/DataDog/browser-sdk/tree/main/packages/logs#initialization-parameters) for more details.

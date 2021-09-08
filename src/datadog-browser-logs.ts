@@ -18,6 +18,7 @@ export class DatadogBrowserLogs extends TransportStream {
   constructor(
     datadogConfig: LogsInitConfiguration,
     options?: TransportStreamOptions,
+    private statusTypeMap = DatadogBrowserLogs.statusTypes,
   ) {
     super(options);
 
@@ -30,7 +31,7 @@ export class DatadogBrowserLogs extends TransportStream {
     });
 
     const { message, level } = info;
-    const status = DatadogBrowserLogs.statusTypes[level];
+    const status = this.statusTypeMap[level];
 
     datadogLogs.logger.log(message, {}, status);
 
