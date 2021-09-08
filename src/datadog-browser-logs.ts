@@ -1,0 +1,39 @@
+import {
+  datadogLogs,
+  LogsInitConfiguration,
+  StatusType,
+} from '@datadog/browser-logs';
+import { LogEntry } from 'winston';
+import TransportStream = require('winston-transport');
+import { TransportStreamOptions } from 'winston-transport';
+
+export class DatadogBrowserLogs extends TransportStream {
+  static readonly statusTypes: Record<string, StatusType> = {
+    debug: 'debug',
+    error: 'error',
+    info: 'info',
+    warn: 'warn',
+  };
+
+  constructor(
+    datadogConfig: LogsInitConfiguration,
+    options?: TransportStreamOptions,
+  ) {
+    super(options);
+
+    datadogLogs.init(datadogConfig);
+  }
+
+  log(info: LogEntry, callback: () => void): void {
+    setImmediate(() => {
+      this.emit('logged', info);
+    });
+
+    const { message, level } = info;
+    const status = DatadogBrowserLogs.statusTypes[level];
+
+    datadogLogs.logger.log(message, {}, status);
+
+    callback();
+  }
+}
