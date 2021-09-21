@@ -1,4 +1,9 @@
 # winston-datadog-browser
+[![npm](https://img.shields.io/npm/v/winston-datadog-browser)](https://www.npmjs.com/package/winston-datadog-browser?activeTab=versions)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/winston-datadog-browser?style=flat-square)](https://bundlephobia.com/package/winston-datadog-browser)
+[![NPM](https://img.shields.io/npm/l/winston-datadog-browser)](https://raw.githubusercontent.com/manbearwiz/winston-datadog-browser/master/LICENSE)
+[![npm](https://img.shields.io/npm/dt/winston-datadog-browser)](https://www.npmjs.com/package/winston-datadog-browser)
+[![GitHub issues](https://img.shields.io/github/issues/manbearwiz/winston-datadog-browser)](https://github.com/manbearwiz/winston-datadog-browser/issues)
 
 Send winston logs from the browser to Datadog via the [datadog browser logs SDK](https://github.com/DataDog/browser-sdk/tree/main/packages/logs#browser-log-collection).
 
