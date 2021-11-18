@@ -21,7 +21,6 @@ export class DatadogBrowserLogs extends TransportStream {
     private statusTypeMap = DatadogBrowserLogs.statusTypes,
   ) {
     super(options);
-
     datadogLogs.init(datadogConfig);
   }
 
