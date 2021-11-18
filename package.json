@@ -7,6 +7,10 @@
   "files": [
     "/dist"
   ],
+  "engines": {
+    "node": "^14.17.0 || ^16.10.0",
+    "npm": "^8.1.0"
+  },
   "keywords": [
     "browser",
     "datadog",
@@ -38,7 +42,7 @@
   "homepage": "https://github.com/manbearwiz/winston-datadog-browser#readme",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
-    "@types/node": "^16.7.13",
+    "@types/node": "^16.11.7",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
     "eslint": "^7.32.0",
@@ -60,6 +64,8 @@
     "*.{ts,css,md}": "prettier --write"
   },
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   }
 }
