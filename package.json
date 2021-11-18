@@ -58,5 +58,8 @@
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
     "*.{ts,css,md}": "prettier --write"
+  },
+  "release": {
+    "branches": ["main"]
   }
 }
