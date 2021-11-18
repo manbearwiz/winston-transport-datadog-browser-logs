@@ -11,9 +11,11 @@
     "browser",
     "datadog",
     "error",
+    "log",
     "logger",
     "logging",
     "logs",
+    "plugin",
     "typescript",
     "winston"
   ],
