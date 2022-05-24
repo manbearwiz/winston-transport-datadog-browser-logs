@@ -54,7 +54,7 @@
     "semantic-release": "^19.0.0"
   },
   "dependencies": {
-    "@datadog/browser-logs": "^3.4.0",
+    "@datadog/browser-logs": "^4.11.1",
     "winston": "^3.3.3",
     "winston-transport": "^4.4.0"
   },
