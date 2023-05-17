@@ -4,8 +4,8 @@ import {
   StatusType,
 } from '@datadog/browser-logs';
 import { LogEntry } from 'winston';
-import TransportStream = require('winston-transport');
 import { TransportStreamOptions } from 'winston-transport';
+import TransportStream = require('winston-transport');
 
 export class DatadogBrowserLogs extends TransportStream {
   static readonly statusTypes: Record<string, StatusType> = {
