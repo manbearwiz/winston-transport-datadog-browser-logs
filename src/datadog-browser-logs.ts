@@ -25,7 +25,7 @@ export class DatadogBrowserLogs extends TransportStream {
     datadogLogs.init(datadogConfig);
   }
 
-  log(info: LogEntry, callback: () => void): void {
+  override log(info: LogEntry, callback: () => void): void {
     setImmediate(() => {
       this.emit('logged', info);
     });
