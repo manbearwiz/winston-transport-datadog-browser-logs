@@ -66,7 +66,10 @@
     "winston-transport": "^4.4.0"
   },
   "lint-staged": {
-    "*.ts": "eslint --cache --fix",
+    "*.ts": [
+      "eslint --cache --fix",
+      "vitest related --run"
+    ],
     "**/*": "prettier --write --ignore-unknown"
   },
   "release": {
