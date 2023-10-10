@@ -1,12 +1,12 @@
-name: Release
+name: Pull Request
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,8 +25,11 @@ jobs:
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
 
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+      - name: Lint code
+        run: npm run lint
+
+      - name: Test
+        run: npm run coverage
+
+      - name: Build
+        run: npm run build
