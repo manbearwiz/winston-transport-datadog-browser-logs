@@ -23,6 +23,6 @@ rules:
         caseInsensitive: true
       newlines-between: always
 overrides:
-  - files: '*.{config,spec}.ts'
+  - files: '*.{config,spec,test}.ts'
     extends:
       - plugin:@typescript-eslint/disable-type-checked

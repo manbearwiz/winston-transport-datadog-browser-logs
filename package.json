@@ -77,5 +77,8 @@
     "branches": [
       "main"
     ]
+  },
+  "overrides": {
+    "tsconfig-paths": "^4.0.0"
   }
 }
