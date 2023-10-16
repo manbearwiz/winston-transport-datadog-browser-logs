@@ -62,7 +62,7 @@
     "vitest": "^0.34.6"
   },
   "dependencies": {
-    "@datadog/browser-logs": "^4.42.2",
+    "@datadog/browser-logs": "^5.0.0",
     "winston": "^3.3.3",
     "winston-transport": "^4.4.0"
   },
