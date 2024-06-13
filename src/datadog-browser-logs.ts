@@ -1,10 +1,10 @@
 import {
+  type LogsInitConfiguration,
+  type StatusType,
   datadogLogs,
-  LogsInitConfiguration,
-  StatusType,
 } from '@datadog/browser-logs';
-import { LogEntry } from 'winston';
-import { TransportStreamOptions } from 'winston-transport';
+import type { LogEntry } from 'winston';
+import type { TransportStreamOptions } from 'winston-transport';
 import TransportStream = require('winston-transport');
 
 export class DatadogBrowserLogs extends TransportStream {

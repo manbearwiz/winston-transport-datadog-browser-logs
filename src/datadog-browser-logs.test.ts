@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 import { datadogLogs } from '@datadog/browser-logs';
-import { expect, test, vi, describe, beforeEach } from 'vitest';
+import { beforeEach, describe, expect, test, vi } from 'vitest';
 import winston from 'winston';
 
 import { DatadogBrowserLogs } from './datadog-browser-logs';
