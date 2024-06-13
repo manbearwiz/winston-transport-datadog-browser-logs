@@ -28,7 +28,7 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "prepublish": "npm run build",
-    "prepare": "husky install",
+    "prepare": "husky",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -42,8 +42,8 @@
   },
   "homepage": "https://github.com/manbearwiz/winston-datadog-browser#readme",
   "devDependencies": {
-    "@commitlint/cli": "^17.6.3",
-    "@commitlint/config-angular": "^18.0.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-angular": "^19.3.0",
     "@tsconfig/recommended": "^1.0.3",
     "@tsconfig/strictest": "^2.0.2",
     "@types/node": "^20.12.12",
